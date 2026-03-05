@@ -1,0 +1,24 @@
+project:
+  name: test-project
+  stack: basic
+  variables:
+    greeting: Hello
+    target: World
+
+steps:
+  - name: create-output
+    step_type: create_dir
+    dest: output
+
+  - name: render-greeting
+    step_type: template
+    source: tests/fixtures/templates
+    dest: output
+    depends_on:
+      - create-output
+
+  - name: echo-done
+    step_type: command
+    run: echo "Scaffold complete"
+    depends_on:
+      - render-greeting

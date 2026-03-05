@@ -1,0 +1,35 @@
+project:
+  name: my-project
+  stack: react-fastapi
+  variables:
+    app_name: my-app
+    version: "0.1.0"
+
+steps:
+  - name: create-frontend
+    step_type: create_dir
+    dest: frontend
+
+  - name: create-backend
+    step_type: create_dir
+    dest: backend
+
+  - name: scaffold-frontend
+    step_type: template
+    source: templates/react-fastapi/frontend
+    dest: frontend
+    depends_on:
+      - create-frontend
+
+  - name: scaffold-backend
+    step_type: template
+    source: templates/react-fastapi/backend
+    dest: backend
+    depends_on:
+      - create-backend
+
+  - name: install-frontend-deps
+    step_type: command
+    run: echo "Frontend dependencies installed"
+    depends_on:
+      - scaffold-frontend
