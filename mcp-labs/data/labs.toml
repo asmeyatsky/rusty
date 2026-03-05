@@ -1,0 +1,27 @@
+[lab]
+name = "Smeyatsky Labs"
+owner = "Allan Smeyatsky"
+version = "0.1.0"
+
+[[projects]]
+name = "stacklens-cli"
+description = "Website tech-stack detector"
+status = "complete"
+language = "Rust"
+tags = ["cli", "web", "scraping", "detection"]
+binary_path = "stacklens-cli"
+
+[[projects]]
+name = "forge-runner"
+description = "Project scaffolding engine"
+status = "complete"
+language = "Rust"
+tags = ["cli", "scaffolding", "yaml", "templates", "async"]
+binary_path = "forge-runner"
+
+[[projects]]
+name = "mcp-labs"
+description = "MCP server for Smeyatsky Labs project metadata"
+status = "in_progress"
+language = "Rust"
+tags = ["mcp", "json-rpc", "server", "ai"]

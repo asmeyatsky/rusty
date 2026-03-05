@@ -1,0 +1,26 @@
+[lab]
+name = "Test Labs"
+owner = "Test User"
+version = "0.0.1"
+
+[[projects]]
+name = "alpha"
+description = "First test project"
+status = "complete"
+language = "Rust"
+tags = ["cli", "testing"]
+binary_path = "alpha-bin"
+
+[[projects]]
+name = "beta"
+description = "Second test project with web features"
+status = "in_progress"
+language = "Python"
+tags = ["web", "api"]
+
+[[projects]]
+name = "gamma"
+description = "Third project for CLI tooling"
+status = "planning"
+language = "Rust"
+tags = ["cli", "automation"]
